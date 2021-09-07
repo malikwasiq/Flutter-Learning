@@ -1,6 +1,8 @@
 void main (){
 var name = 'Syed Hasan Ali'; 
-var fathername = "Syed Hammad Ali"; 
+var fathername = "Syed Hammad Ali";
+var classs = 8;
+var sec = "C"; 
 var obtainedMarksofMaths = 86;
 var totalMarksofMaths = 100;
 var obtainedMarksofPhysics = 81; 
@@ -19,33 +21,9 @@ var percentageofEnglish = (obtainedMarksofEnglish/totalMarksofEnglish)*100;
 var obtainedMarks = (obtainedMarksofMaths+obtainedMarksofPhysics+obtainedMarksofChemistry+obtainedMarksofBiology+obtainedMarksofEnglish);
 var totalMarks = (totalMarksofMaths+totalMarksofPhysics+totalMarksofChemistry+totalMarksofBiology+totalMarksofEnglish);  
 var totalPercentage = (obtainedMarks/totalMarks)*100;
-print("Student Name : ${name}");
-print("Father Name : ${fathername}");
-     
-if (percentageofMaths<80)
-   print("Grade of Maths: A");
- else (percentageofMaths>80);
-    print("Grade of Maths: A+");
-if (percentageofPhysics<80)
-  print ("Grade of Physics: A");
- else (percentageofPhysics>80); 
-print ("Grade of Physics: A+");
-if (percentageofChemistry<80)
-print ("Grade of Chemistry: A");
-  else (percentageofChemistry>80);
-print ("Grade of Chemistry: A+");  
-if (percentageofBiology<80)
-  print("Grade of Biology: A");
- else (percentageofBiology>80);
-  print("Grade of Biology: A+");
-if (percentageofEnglish>80)
-print("Grade of English: A+");
- else (percentageofEnglish<80);
-print("Grade of English: A");
-if (totalPercentage<80)
- print("Total Grade: A");
-  else(totalPercentage>80);
-  print("Total Grade: A+"); 
+print("Student Name : ${name}\nFather Name : ${fathername}\nClass : ${classs}\nSection : ${sec}\n\nSubject\t\tObtained Marks\t\tTotal Marks\t\tPercentage\t\tGrade\n\nMaths\t\t${obtainedMarksofMaths}\t\t\t${totalMarksofMaths}\n\nPhysics\t\t${obtainedMarksofPhysics}\t\t\t${totalMarksofPhysics}\n\nChemistry\t${obtainedMarksofChemistry}\t\t\t${totalMarksofChemistry}\n\nBiology\t\t${obtainedMarksofBiology}\t\t\t${totalMarksofBiology}\n\nEnglish\t\t${obtainedMarksofEnglish}\t\t\t${totalMarksofEnglish}\n\nTotal\t\t${obtainedMarks}\t\t\t${totalMarks} ");
+  
+   
 
 
 
