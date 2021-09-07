@@ -1,5 +1,6 @@
 void main (){
 var name = 'Syed Hasan Ali'; 
+var fathername = "Syed Hammad Ali"; 
 var obtainedMarksofMaths = 86;
 var totalMarksofMaths = 100;
 var obtainedMarksofPhysics = 81; 
@@ -18,5 +19,65 @@ var percentageofEnglish = (obtainedMarksofEnglish/totalMarksofEnglish)*100;
 var obtainedMarks = (obtainedMarksofMaths+obtainedMarksofPhysics+obtainedMarksofChemistry+obtainedMarksofBiology+obtainedMarksofEnglish);
 var totalMarks = (totalMarksofMaths+totalMarksofPhysics+totalMarksofChemistry+totalMarksofBiology+totalMarksofEnglish);  
 var totalPercentage = (obtainedMarks/totalMarks)*100;
+print("Student Name : ${name}");
+print("Father Name : ${fathername}");
+     
+if (percentageofMaths<80)
+   print("Grade of Maths: A");
+ else (percentageofMaths>80);
+    print("Grade of Maths: A+");
+if (percentageofPhysics<80)
+  print ("Grade of Physics: A");
+ else (percentageofPhysics>80); 
+print ("Grade of Physics: A+");
+if (percentageofChemistry<80)
+print ("Grade of Chemistry: A");
+  else (percentageofChemistry>80);
+print ("Grade of Chemistry: A+");  
+if (percentageofBiology<80)
+  print("Grade of Biology: A");
+ else (percentageofBiology>80);
+  print("Grade of Biology: A+");
+if (percentageofEnglish>80)
+print("Grade of English: A+");
+ else (percentageofEnglish<80);
+print("Grade of English: A");
+if (totalPercentage<80)
+ print("Total Grade: A");
+  else(totalPercentage>80);
+  print("Total Grade: A+"); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
   
