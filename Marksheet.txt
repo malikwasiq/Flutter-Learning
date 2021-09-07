@@ -1,0 +1,22 @@
+void main (){
+var name = 'Syed Hasan Ali'; 
+var obtainedMarksofMaths = 86;
+var totalMarksofMaths = 100;
+var obtainedMarksofPhysics = 81; 
+var totalMarksofPhysics = 100;
+var obtainedMarksofChemistry = 82;
+var totalMarksofChemistry = 100;
+var obtainedMarksofBiology = 89;
+var totalMarksofBiology = 100;
+var obtainedMarksofEnglish = 79;
+var totalMarksofEnglish = 100;
+var percentageofMaths = (obtainedMarksofMaths/totalMarksofMaths)*100;
+var percentageofPhysics = (obtainedMarksofPhysics/totalMarksofPhysics)*100;
+var percentageofChemistry = (obtainedMarksofChemistry/totalMarksofChemistry)*100;  
+var percentageofBiology = (obtainedMarksofBiology/totalMarksofBiology)*100;
+var percentageofEnglish = (obtainedMarksofEnglish/totalMarksofEnglish)*100;
+var obtainedMarks = (obtainedMarksofMaths+obtainedMarksofPhysics+obtainedMarksofChemistry+obtainedMarksofBiology+obtainedMarksofEnglish);
+var totalMarks = (totalMarksofMaths+totalMarksofPhysics+totalMarksofChemistry+totalMarksofBiology+totalMarksofEnglish);  
+var totalPercentage = (obtainedMarks/totalMarks)*100;
+ 
+  
