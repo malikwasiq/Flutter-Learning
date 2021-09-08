@@ -1,4 +1,4 @@
-void main (){
+ void main (){
 var name = 'Syed Hasan Ali'; 
 var fathername = "Syed Hammad Ali";
 var classs = 8;
@@ -21,12 +21,14 @@ var percentageofEnglish = (obtainedMarksofEnglish/totalMarksofEnglish)*100;
 var obtainedMarks = (obtainedMarksofMaths+obtainedMarksofPhysics+obtainedMarksofChemistry+obtainedMarksofBiology+obtainedMarksofEnglish);
 var totalMarks = (totalMarksofMaths+totalMarksofPhysics+totalMarksofChemistry+totalMarksofBiology+totalMarksofEnglish);  
 var totalPercentage = (obtainedMarks/totalMarks)*100;
-print("Student Name : ${name}\nFather Name : ${fathername}\nClass : ${classs}\nSection : ${sec}\n\nSubject\t\tObtained Marks\t\tTotal Marks\t\tPercentage\t\tGrade\n\nMaths\t\t${obtainedMarksofMaths}\t\t\t${totalMarksofMaths}\n\nPhysics\t\t${obtainedMarksofPhysics}\t\t\t${totalMarksofPhysics}\n\nChemistry\t${obtainedMarksofChemistry}\t\t\t${totalMarksofChemistry}\n\nBiology\t\t${obtainedMarksofBiology}\t\t\t${totalMarksofBiology}\n\nEnglish\t\t${obtainedMarksofEnglish}\t\t\t${totalMarksofEnglish}\n\nTotal\t\t${obtainedMarks}\t\t\t${totalMarks} ");
-  
-   
-
-
-
+var gradeofMaths = ("A+");
+var gradeofPhysics = ("A+");
+var gradeofChemistry = ("A+");
+var gradeofBiology = ("A+");
+var gradeofEnglish = ("A");
+var totalGrade = ("A+");
+    
+print("\t\t\t\tA.B.C School\n\t\t\t    Ayesha  Manzil  Campus\n\t\t\t   Date : 9th September 2021 \n\nStudent Name : ${name}\nFather Name : ${fathername}\nClass : ${classs}\nSection : ${sec}\n\nSubject\t\tObtained Marks\t\tTotal Marks\t\tPercentage\t\tGrade\n\nMaths\t\t${obtainedMarksofMaths}\t\t\t${totalMarksofMaths}\t\t\t${percentageofMaths} %\t\t\t${gradeofMaths}\n\nPhysics\t\t${obtainedMarksofPhysics}\t\t\t${totalMarksofPhysics}\t\t\t${percentageofPhysics} %\t\t\t${gradeofPhysics}\n\nChemistry\t${obtainedMarksofChemistry}\t\t\t${totalMarksofChemistry}\t\t\t${percentageofChemistry} %\t\t\t${gradeofChemistry}\n\nBiology\t\t${obtainedMarksofBiology}\t\t\t${totalMarksofBiology}\t\t\t${percentageofBiology} %\t\t\t${gradeofBiology}\n\nEnglish\t\t${obtainedMarksofEnglish}\t\t\t${totalMarksofEnglish}\t\t\t${percentageofEnglish} %\t\t\t${gradeofEnglish}\n\nTotal\t\t${obtainedMarks}\t\t\t${totalMarks}\t\t\t${totalPercentage} %\t${totalGrade} ");
 
 
 
