@@ -1,5 +1,6 @@
 Q.1 What are the various types of operators in dart ? Explain with Examples.
 
+
 Ans: There are three types of operators in dart which are Arithmetic,Relational and Logical operators 
 
 Arithmetic Operators : 
