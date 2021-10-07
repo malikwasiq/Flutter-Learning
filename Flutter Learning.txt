@@ -1,95 +1,35 @@
-1) Install Flutter, make a project by “Flutter create projectname” and then run app by “flutter run and take a screenshot.
+import 'package:flutter/material.dart' ;
 
-Ans.-----------
-
-2) To make a function that takes a number as a parameter, and print the table of that number.
-
-Ans.
-void main(){
-abc(7);  
+void main() {
+  runApp(const MyApp());
 }
-void abc(var number){
-for(var i = number;i<=number*10;i=i+number){
-  print(i);
-}
-}
+class MyApp extends StatelessWidget {
+  const MyApp({ Key? key }) : super(key: key);
 
-3) List lst = [2,4,6,8,9];
-Make a function that takes a number as parameter and divide that parameter to every element
-in the list
-
-Ans.
-void main(){
-abc(2);  
-}
-void abc(var number){
-var lst =  [2,4,6,8,9];
- for(var i in lst){
-print(i/number);   
-} 
-}
-
-4) Make a function for printing mark sheet then Make a list of at-least 5 names and another list of
-their marks, and print the mark sheet of all of them.
-
-Ans.
-void main (){
-marksheet();
- }
-void marksheet(){
-var names =  ["Ali","Owais","Imran","Bilal","Zain"];
-var marks = [95,76,81,67,61];
-print ({names[0]:marks[0],names[1]:marks[1],names[2]:marks[2],names[3]:marks[3],names[4]:marks[4]});  
-}
-
-5) Make a function in class and then call it outside class
-
-Ans.
-void main (){
- var name = Name();
- name.name2("Malik Wasiq"); 
-   }
-class Name{
- void name2(String name3){ 
- print(name3);
-  }
-}
-
-6) Print your name in a sentence using class.
-
-Ans.
-void main (){
- var name = Name("Malik Wasiq");
-}
-class Name
-{
-String name3="";
-Name(name3){
- this.name3=name3 ; 
-} 
-}
-
-7) Make a constructor that requires your name, age, education and then print that.
-
-Ans.
-void main(){
   
- var me =Me("Malik Wasiq",14,"8th Grade");
-print(me.name);
-print(me.age);
-print(me.education);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    home:Scaffold( 
+    body:
+    Center(
+      child: Column(
+        children: [
+         const TextField(),
+
+         const TextField(),
+
+        ElevatedButton( onPressed : () {},child: const Text("Login"),
+         ),
+          
+        ],
+        ),
+    )
+    ),
+    ); 
+   
+  
+  }
+  
 }
-class Me{
-String name; 
-int age ;
-String education ;  
-Me(String name,int age,String education){
-  this.name=name;
-  this.age=age;
-  this.education=education;
-}  
-}  
-
-
-
-
