@@ -1,247 +1,73 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
-void main() {
-  runApp( const MyApp());
-}
-class MyApp extends StatelessWidget {
+import 'package:flutter/material.dart' ;
+void main() => runApp( const MyApp()); 
+class MyApp extends StatefulWidget {
   const MyApp({ Key? key }) : super(key: key);
  @override
+  _MyAppState createState() => _MyAppState();
+}
+class _MyAppState extends State<MyApp> {
+  TextEditingController txt =TextEditingController();
+var lst =[];
+String gettext="";
+void submit(){
+setState(() { 
+lst.add(gettext);
+print(lst);
+}
+);
+}
+void subbmit(){
+setState(() { 
+lst.remove(gettext);
+print(lst);
+}
+);
+}
+void submmit(){
+setState(() { 
+lst.replaceRange(0,lst.length,[gettext]);
+print(lst);
+}
+);
+}
+@override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: Scaffold(
-      appBar:AppBar(
-       backgroundColor:Colors.white70 , 
-      leading:Row(
-        children: <Widget>[
-     const Padding(padding: EdgeInsets.only(left:20)),     
-   Image.asset('assets/mobi.jpeg',
-       height: 30,
-       ),
-        ],
-      )
-      ,title:Row(
-     children:  const [
-     Text('mobi'
-     ,style :TextStyle(color: Colors.black,
-     )
-     ),Text('sport',style: TextStyle(color: Colors.grey),)
-    ,SizedBox(width: 700,)
-    ,Icon(CupertinoIcons.search,color: Colors.grey,)
-],
-) ,
+    return MaterialApp(home:  
+    Scaffold(
+        body:
+         Column(
+          children: [
+TextField(
+controller: txt,
+onChanged: (value){
+ gettext=value; 
+},
 )
-,body: Column(
-  children: <Widget>[
-   const SizedBox(height: 20,)
-   ,Row (
-   children: const [
-
-  Text('   Running',style: TextStyle(fontSize: 25),)
-  ,SizedBox(width: 625,)
-  ,Text('Showing 15 results',style: TextStyle(fontSize:17 ),)
- ,]
-  ),
-const SizedBox(height: 24),
-  Stack(
-children:[
-Container(
-height: 175,
-width: 900 ,
-decoration: const BoxDecoration(
-color: Colors.white54,
-borderRadius:BorderRadius.only(
-topLeft:Radius.circular(13),
-topRight: Radius.circular(15),
-bottomLeft: Radius.circular(15),
-bottomRight: Radius.circular(15) ),
- boxShadow: [
-   BoxShadow(
- color: Colors.white54,
-  spreadRadius: 2,
-  blurRadius: 4,
-  offset: Offset(0, 3)
- )
- ]
- )
-   ,child:Row(children: [  
- 
-const SizedBox(width: 10,) 
-   ,Image.asset('assets/shoes2.jpg',)
-   ,const SizedBox(width:200)
-,Column(
-  children: [
-const SizedBox(height: 40,),
-  const Text("Men's \t \t         ",style: TextStyle(fontSize: 18),),
-  const Text("Fuelcell Echo\t",style: TextStyle(fontSize: 18))
-,const SizedBox(height: 12,)
- ,const Text("Men's      \t\t\t\t\t\t\t\t\t\t\t  \t      ",style: TextStyle(fontSize: 9),)
-,const SizedBox(height: 9,)
-,Row(
-  children: const [
-Icon(Icons.star)
-,Icon(Icons.star)
-,Icon(Icons.star)
-,Icon(Icons.star) 
-,Icon(Icons.star),
-  ],
-)
-,const SizedBox(height:10 ,)
-,const Text("99.9\t\t\t\t\t\t\t\t",style: TextStyle(fontSize: 20),)
-],
-) 
-],
-)
-) 
-],
-)
-,const SizedBox(height:35)
- , Container(
-height: 175,
-width: 900 ,
-decoration: const BoxDecoration(
-color: Colors.white54,
-borderRadius:BorderRadius.only(
-topLeft:Radius.circular(13),
-topRight: Radius.circular(15),
-bottomLeft: Radius.circular(15),
-bottomRight: Radius.circular(15) ),
- boxShadow: [
-   BoxShadow(
- color: Colors.white54,
-  spreadRadius: 2,
-  blurRadius: 4,
-  offset: Offset(0, 3)
-)
+,TextButton(
+  onPressed:(){
+    submit();
+    txt.clear();} , 
+    child: const Text("Submit"))
+     ,TextButton(
+  onPressed:(){
+    subbmit();},
+     child: const Text("Remove"))
+ ,TextButton(
+   onPressed:(){
+     submmit();
+     txt.clear();} , 
+     child: const Text("Replace"))
+  ,ListView.builder(
+  physics: const NeverScrollableScrollPhysics(),
+  shrinkWrap: true,
+  itemCount: lst.length,
+  itemBuilder:(context,index){
+  return Text(lst[index]);
+}     
+),         
 ]
 )
-   ,child:Row(children: [  
-Image.asset('assets/shoes3.jpg',)
-   ,const SizedBox(width:170)
-,Column(
-  children: [
-const SizedBox(height: 40,),
-  const Text("Men's \t \t         ",style: TextStyle(fontSize: 18),),
-  const Text("Fuelcell Echo\t",style: TextStyle(fontSize: 18))
-,const SizedBox(height: 12,)
- ,const Text("Men's      \t\t\t\t\t\t\t\t\t\t\t  \t      ",style: TextStyle(fontSize: 9),)
-,const SizedBox(height: 9,)
-,Row(
-  children: const [
-Icon(Icons.star)
-,Icon(Icons.star)
-,Icon(Icons.star)
-,Icon(Icons.star) 
-,Icon(Icons.star),
-],
 )
-,const SizedBox(height:10 ,)
-,const Text("99.9\t\t\t\t\t\t\t\t",style: TextStyle(fontSize: 20),)
-],
-) 
-],
-)
-) 
-,const SizedBox(height: 35,)
-,Container(
-height: 175,
-width: 900 ,
-decoration: const BoxDecoration(
-color: Colors.white54,
- borderRadius:BorderRadius.only(
-topLeft:Radius.circular(13),
-topRight: Radius.circular(15),
-bottomLeft: Radius.circular(15),
-bottomRight: Radius.circular(15) ),
- boxShadow: [
-   BoxShadow(
- color: Colors.white54,
-  spreadRadius: 2,
-  blurRadius: 4,
-  offset: Offset(0, 3)
- )
-]
-)
-   ,child:Row(children: [  
-const SizedBox(width: 10,),                                
-   Image.asset('assets/shoes1.jpg',)
-   ,const SizedBox(width:200)
-,Column(
-  children: [
-const SizedBox(height: 40,),                
-  const Text("Men's \t \t         ",style: TextStyle(fontSize: 18),),
-  const Text("Fuelcell Echo\t",style: TextStyle(fontSize: 18))
-,const SizedBox(height: 12,)
- ,const Text("Men's      \t\t\t\t\t\t\t\t\t\t\t  \t      ",style: TextStyle(fontSize: 9),)
-,const SizedBox(height: 9,)
-,Row(
-  children: const [
-Icon(Icons.star)
-,Icon(Icons.star)
-,Icon(Icons.star)
-,Icon(Icons.star) 
-,Icon(Icons.star),
-  ],
-)
-,const SizedBox(height:10 ,)
-,const Text("99.9\t\t\t\t\t\t\t\t",style: TextStyle(fontSize: 20),)
-],
-) 
-],
-)
-)
-,const SizedBox(height:118)
-,Container(
-height: 85,
-width: 950,
-decoration: const BoxDecoration(
-color: Colors.white70,
-),
-child:Row(
-  children: [
-const SizedBox(width: 90,)
-,Column(
-children:const [
-  SizedBox(height: 20,)
-,Icon(Icons.home,size:35 ,)
-,Text("Home")
-]
-)
-,const SizedBox(width: 140,)
-,Column(
-  children:const [
-SizedBox(height: 20,)
-,
-Icon(Icons.more_vert,size:35)
-,Text('Catalog')  
-]
-)
-,const SizedBox(width: 140,)
-,Column(children: const [
-SizedBox(height: 20,)
-,
-Icon(Icons.shopping_bag,size:35),
-Text('Bag')
-],)
-,const SizedBox(width: 140,)
-,Column(children: const [
-SizedBox(height: 20,)
-,Icon(Icons.person,size: 35,)
-,Text("Profile")
-],)
-,const SizedBox(width: 140,)
-,Column(children: const [
-SizedBox(height: 20,)
-,Icon(Icons.more_horiz,size: 35,)
-,Text('More')
-],)
-],
-)
-) 
-],
-)
-),
 );
 }
 }
